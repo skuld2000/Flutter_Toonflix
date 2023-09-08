@@ -5,7 +5,7 @@ import 'package:toonflix/models/webtoon_model.dart';
 
 class ApiService {
   static const String baseUrl =
-      "https://webtoon-crawler.nomadcoders.workers.dev";
+      'https://webtoon-crawler.nomadcoders.workers.dev';
   static const String today = "today";
 
   static Future<List<WebtoonModel>> getTodaysToons() async {
