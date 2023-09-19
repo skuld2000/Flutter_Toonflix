@@ -40,10 +40,16 @@ class Webtoon extends StatelessWidget {
                       color: Colors.black.withOpacity(0.3),
                     )
                   ]),
-              child: Image.network(thumb), //webtoon.thumb),
+              child: Image.network(
+                thumb,
+                headers: const {
+                  "User-Agent":
+                      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+                },
+              ), //webtoon.thumb),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             title,
             style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600),

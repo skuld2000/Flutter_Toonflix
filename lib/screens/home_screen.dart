@@ -47,13 +47,12 @@ class HomeScreen extends StatelessWidget {
   ListView makeList(AsyncSnapshot<List<WebtoonModel>> snapshot) {
     return ListView.separated(
       scrollDirection: Axis.horizontal,
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       itemCount: snapshot.data!.length,
       itemBuilder: (context, index) {
         var webtoon = snapshot.data![index];
-        String uri =
-            'https://postfiles.pstatic.net/20160530_217/cat1808_1464605874688AmO2z_JPEG/3.jpg?type=w773';
-        return Webtoon(title: webtoon.title, thumb: uri, id: webtoon.id);
+        return Webtoon(
+            title: webtoon.title, thumb: webtoon.thumb, id: webtoon.id);
       },
       separatorBuilder: (context, index) => const SizedBox(
         width: 40,
